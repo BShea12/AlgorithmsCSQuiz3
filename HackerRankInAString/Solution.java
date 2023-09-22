@@ -28,7 +28,10 @@ class Result {
                 return true;
             }
             //System.out.println(s.substring(pos, s.length()));
-            return hackerrankHelper(s.substring(pos, s.length()), n + 1);
+            if(pos + 1 > s.length()){
+                return false;
+            }
+            return hackerrankHelper(s.substring(pos + 1, s.length()), n + 1);
         }
         return false;
     }
